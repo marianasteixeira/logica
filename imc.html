@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+
+var pulaLinha = function() {
+document.write("<br>");
+};
+var mostra = function(frase) {
+document.write(frase);
+pulaLinha();
+pulaLinha();
+}
+
+
+var pesodoprimo = 83;
+var alturadoprimo = 1.76;
+var imcdoprimo = calculaimc(alturadoprimo, pesodoprimo)
+mostra("O imc do meu primo é: " + imcdoprimo)
+mostra("Ele ainda está " + (imcdoprimo - 18.5) + "pontos acima do limite de magreza.");
+
+var nome = prompt ("Bom dia! Qual seu nome?");
+mostra("Bem-vindo, " + nome);
+var idade = prompt ("Quantos anos você tem?");
+mostra("Você tem" + idade + " anos");
+
+
+var calculaimc = function(altura, peso) {
+var imc = peso / (altura * altura);
+return imc;
+}
+var meuimc = calculaimc(1.72, 85);
+
+
+
+
+if(meuimc < 18.5) {
+mostra("Seu imc indica que você está abaixo do peso.");
+}
+
+if(meuimc > 35) {
+mostra("Seu imc indica que vocÇe está acima do peso.");
+}
+
+if(meu imc > 18.5 && meu imc < 35) {
+mostra("Seu imc indica que você está no peso ideal.");
+}
+
+</script>
